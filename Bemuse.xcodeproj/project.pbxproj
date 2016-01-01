@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0BC89B1B206BB12FF4DAD1DE /* Pods_Bemuse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B08045BBB7B19505C611AA8D /* Pods_Bemuse.framework */; };
 		F84461EC1C366AE40069D3E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84461EB1C366AE40069D3E3 /* AppDelegate.swift */; };
 		F84461EE1C366AE40069D3E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84461ED1C366AE40069D3E3 /* ViewController.swift */; };
 		F84461F11C366AE40069D3E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F84461EF1C366AE40069D3E3 /* Main.storyboard */; };
 		F84461F31C366AE40069D3E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F84461F21C366AE40069D3E3 /* Assets.xcassets */; };
 		F84461F61C366AE40069D3E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F84461F41C366AE40069D3E3 /* LaunchScreen.storyboard */; };
+		F89C67651C367482002806F5 /* Game in Resources */ = {isa = PBXBuildFile; fileRef = F89C67641C367482002806F5 /* Game */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B08045BBB7B19505C611AA8D /* Pods_Bemuse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bemuse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D132AC3CFEF57B5E499D1DE3 /* Pods-Bemuse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bemuse.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bemuse/Pods-Bemuse.debug.xcconfig"; sourceTree = "<group>"; };
+		DA49E3E1F6CA7FA94E513291 /* Pods-Bemuse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bemuse.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bemuse/Pods-Bemuse.release.xcconfig"; sourceTree = "<group>"; };
 		F84461E81C366AE40069D3E3 /* Bemuse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bemuse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F84461EB1C366AE40069D3E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F84461ED1C366AE40069D3E3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +27,8 @@
 		F84461F21C366AE40069D3E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F84461F51C366AE40069D3E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F84461F71C366AE40069D3E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F89C67631C366F24002806F5 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		F89C67641C367482002806F5 /* Game */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Game; path = Bemuse/Game; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +36,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BC89B1B206BB12FF4DAD1DE /* Pods_Bemuse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		214C8099E638998266888CCA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B08045BBB7B19505C611AA8D /* Pods_Bemuse.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		636135FD5C0C05C618FDC0BF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D132AC3CFEF57B5E499D1DE3 /* Pods-Bemuse.debug.xcconfig */,
+				DA49E3E1F6CA7FA94E513291 /* Pods-Bemuse.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F84461DF1C366AE40069D3E3 = {
 			isa = PBXGroup;
 			children = (
+				F89C67641C367482002806F5 /* Game */,
 				F84461EA1C366AE40069D3E3 /* Bemuse */,
 				F84461E91C366AE40069D3E3 /* Products */,
+				636135FD5C0C05C618FDC0BF /* Pods */,
+				214C8099E638998266888CCA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +88,7 @@
 				F84461F21C366AE40069D3E3 /* Assets.xcassets */,
 				F84461F41C366AE40069D3E3 /* LaunchScreen.storyboard */,
 				F84461F71C366AE40069D3E3 /* Info.plist */,
+				F89C67631C366F24002806F5 /* Bridging-Header.h */,
 			);
 			path = Bemuse;
 			sourceTree = "<group>";
@@ -71,9 +100,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F84461FA1C366AE40069D3E3 /* Build configuration list for PBXNativeTarget "Bemuse" */;
 			buildPhases = (
+				9AC28F81F3A4D3F0E89FEC71 /* Check Pods Manifest.lock */,
 				F84461E41C366AE40069D3E3 /* Sources */,
 				F84461E51C366AE40069D3E3 /* Frameworks */,
+				F896D0971C3677D000EAE28D /* ShellScript */,
 				F84461E61C366AE40069D3E3 /* Resources */,
+				5D1B6E885B2F28745ECD6543 /* Embed Pods Frameworks */,
+				B23D8AE41AF5AB36ECB1BB73 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -96,6 +129,7 @@
 				TargetAttributes = {
 					F84461E71C366AE40069D3E3 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = JHP7M4D85V;
 					};
 				};
 			};
@@ -122,6 +156,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F89C67651C367482002806F5 /* Game in Resources */,
 				F84461F61C366AE40069D3E3 /* LaunchScreen.storyboard in Resources */,
 				F84461F31C366AE40069D3E3 /* Assets.xcassets in Resources */,
 				F84461F11C366AE40069D3E3 /* Main.storyboard in Resources */,
@@ -129,6 +164,67 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5D1B6E885B2F28745ECD6543 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bemuse/Pods-Bemuse-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9AC28F81F3A4D3F0E89FEC71 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B23D8AE41AF5AB36ECB1BB73 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bemuse/Pods-Bemuse-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F896D0971C3677D000EAE28D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "bash copy.sh";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F84461E41C366AE40069D3E3 /* Sources */ = {
@@ -247,23 +343,33 @@
 		};
 		F84461FB1C366AE40069D3E3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D132AC3CFEF57B5E499D1DE3 /* Pods-Bemuse.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Bemuse/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ninja.bemuse.ipad.Bemuse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Bemuse/Bridging-Header.h";
 			};
 			name = Debug;
 		};
 		F84461FC1C366AE40069D3E3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA49E3E1F6CA7FA94E513291 /* Pods-Bemuse.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Bemuse/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ninja.bemuse.ipad.Bemuse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Bemuse/Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -286,6 +392,7 @@
 				F84461FC1C366AE40069D3E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

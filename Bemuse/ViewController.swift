@@ -7,12 +7,18 @@
 //
 
 import UIKit
+import SafariServices
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, SFSafariViewControllerDelegate {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view, typically from a nib.
+	}
+	
+	override func viewDidAppear(animated: Bool) {
+		let safari = SFSafariViewController(URL: NSURL(string: "http://localhost:8080")!)
+		safari.delegate = self
+		presentViewController(safari, animated: true, completion: nil)
 	}
 
 	override func didReceiveMemoryWarning() {
@@ -20,6 +26,10 @@ class ViewController: UIViewController {
 		// Dispose of any resources that can be recreated.
 	}
 
+	func safariViewControllerDidFinish(controller: SFSafariViewController) {
+		// THANK YOU FOR PLAYING
+		UIControl().sendAction(Selector("suspend"), to: UIApplication.sharedApplication(), forEvent: nil)
+	}
 
 }
 

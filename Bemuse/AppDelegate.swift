@@ -7,15 +7,22 @@
 //
 
 import UIKit
+import GCDWebServer
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	var window: UIWindow?
-
+	var server: GCDWebServer = GCDWebServer()
 
 	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-		// Override point for customization after application launch.
+		let game = NSBundle.mainBundle().resourceURL!
+			.URLByAppendingPathComponent("Game")
+		let enginePath = game.URLByAppendingPathComponent("engine").path!
+		let musicPath = game.URLByAppendingPathComponent("music").path!
+		server.addGETHandlerForBasePath("/", directoryPath: enginePath, indexFilename: "index.html", cacheAge: 0, allowRangeRequests: true)
+		server.addGETHandlerForBasePath("/music/", directoryPath: musicPath, indexFilename: "index.html", cacheAge: 0, allowRangeRequests: true)
+		server.startWithPort(8080, bonjourName: nil)
 		return true
 	}
 
