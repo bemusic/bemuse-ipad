@@ -22,7 +22,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		let musicPath = game.URLByAppendingPathComponent("music").path!
 		server.addGETHandlerForBasePath("/", directoryPath: enginePath, indexFilename: "index.html", cacheAge: 0, allowRangeRequests: true)
 		server.addGETHandlerForBasePath("/music/", directoryPath: musicPath, indexFilename: "index.html", cacheAge: 0, allowRangeRequests: true)
-		server.startWithPort(8080, bonjourName: nil)
+		let options: [NSObject : AnyObject] = [
+			GCDWebServerOption_Port: 8080,
+			GCDWebServerOption_AutomaticallySuspendInBackground: false
+		]
+		do {
+			try server.startWithOptions(options)
+		} catch {
+			return false
+		}
 		return true
 	}
 
